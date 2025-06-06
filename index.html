@@ -1,14 +1,13 @@
 <!DOCTYPE html><html lang="bn" class="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Luminix – ভিডিও শেয়ারিং প্ল্যাটফর্ম</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luminix অ্যাপ ডাউনলোড</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script>
     function toggleDarkMode() {
       document.documentElement.classList.toggle('dark');
-      const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-      localStorage.setItem('theme', theme);
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     }
     document.addEventListener('DOMContentLoaded', () => {
       if (localStorage.getItem('theme') === 'dark') {
@@ -17,53 +16,32 @@
     });
   </script>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">  <!-- হেডার -->  <header class="bg-indigo-600 dark:bg-indigo-800 text-white px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center space-x-4">
-      <h1 class="text-2xl font-bold">Luminix</h1>
-      <nav class="hidden md:flex space-x-4">
-        <a href="#" class="hover:underline">হোম</a>
-        <a href="#upload" class="hover:underline">আপলোড</a>
-        <a href="#profile" class="hover:underline">প্রোফাইল</a>
-      </nav>
-    </div>
-    <div class="md:hidden">
-      <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">☰</button>
-    </div>
-    <button onclick="toggleDarkMode()" class="ml-4 bg-white text-indigo-700 px-3 py-1 rounded text-sm">🌓 মোড</button>
-  </header>
-  <nav id="mobile-menu" class="md:hidden bg-indigo-500 text-white px-6 py-2 hidden">
-    <a href="#" class="block py-1">হোম</a>
-    <a href="#upload" class="block py-1">আপলোড</a>
-    <a href="#profile" class="block py-1">প্রোফাইল</a>
-  </nav>  <!-- ভিডিও হোম ফিড -->  <main class="p-6 max-w-7xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-6">🔥 ট্রেন্ডিং ভিডিও</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <!-- ভিডিও কার্ড -->
-      <div class="bg-white dark:bg-gray-800 rounded shadow">
-        <img src="https://via.placeholder.com/400x225.png?text=ভিডিও+১" alt="ভিডিও থাম্বনেইল" class="rounded-t">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">বাংলা ভ্লগ পর্ব ১</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">TechTumi • ৫.৩K ভিউ • ১ দিন আগে</p>
-        </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 rounded shadow">
-        <img src="https://via.placeholder.com/400x225.png?text=ভিডিও+২" alt="ভিডিও থাম্বনেইল" class="rounded-t">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">রান্নার রেসিপি – দই চিংড়ি</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">RannaGhor • ৩.৮K ভিউ • ২ দিন আগে</p>
-        </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 rounded shadow">
-        <img src="https://via.placeholder.com/400x225.png?text=ভিডিও+৩" alt="ভিডিও থাম্বনেইল" class="rounded-t">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">টিউটোরিয়াল: HTML শিখুন</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">CodeBangla • ৭.২K ভিউ • ৩ দিন আগে</p>
-        </div>
-      </div>
-      <!-- আরও ভিডিও কার্ড চাইলে কপি করে নিন -->
-    </div>
-  </main>  <!-- ফুটার -->  <footer class="bg-gray-200 dark:bg-gray-800 text-center p-4 text-sm text-gray-600 dark:text-gray-300 mt-10">
-    © ২০২৫ Luminix — বাংলা ভিডিও প্ল্যাটফর্ম
-  </footer>
-</body>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+    <img src="https://via.placeholder.com/100x100.png?text=LX" alt="Luminix Logo" class="w-24 h-24 mb-4 rounded-full shadow">
+    <h1 class="text-3xl font-bold mb-2">Luminix</h1>
+    <p class="text-lg text-center max-w-xl mb-6">বাংলাভাষী ইউজারদের জন্য আধুনিক ভিডিও শেয়ারিং অ্যাপ। এখনই ডাউনলোড করুন এবং আপনার কনটেন্ট শেয়ার করুন!</p><!-- ফিচার লিস্ট -->
+<ul class="text-left space-y-2 mb-8">
+  <li>✅ ভিডিও আপলোড ও লাইভ স্ট্রিমিং</li>
+  <li>✅ ইউজার প্রোফাইল ও সাবস্ক্রিপশন</li>
+  <li>✅ রেটিং, মন্তব্য ও ফলো সিস্টেম</li>
+  <li>✅ হালকা ও ডার্ক মোড</li>
+</ul>
+
+<!-- প্রিভিউ ছবি -->
+<img src="https://via.placeholder.com/300x600.png?text=App+Preview" alt="App Screenshot" class="rounded shadow mb-6">
+
+<!-- ডাউনলোড বাটন -->
+<div class="flex space-x-4">
+  <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded shadow text-sm">⬇️ Android ডাউনলোড</a>
+  <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded shadow text-sm">🍎 iOS ডাউনলোড</a>
+</div>
+
+<!-- ডার্ক মোড টগল -->
+<button onclick="toggleDarkMode()" class="mt-8 text-sm text-indigo-500 underline">🌓 ডার্ক মোড টগল করুন</button>
+
+<footer class="mt-12 text-sm text-gray-500 dark:text-gray-400">
+  © ২০২৫ Luminix • বাংলা ভিডিও অ্যাপ
+</footer>
+
+  </div></body>
 </html>
