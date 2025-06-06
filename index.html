@@ -1,17 +1,15 @@
 <!DOCTYPE html><html lang="bn" class="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Luminix</title>
+  <title>Luminix – ভিডিও শেয়ারিং প্ল্যাটফর্ম</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script>
-    // ডার্ক মোড টগল
     function toggleDarkMode() {
       document.documentElement.classList.toggle('dark');
       const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
       localStorage.setItem('theme', theme);
     }
-    // পেজ লোড হলে ডার্ক মোড রিস্টোর
     document.addEventListener('DOMContentLoaded', () => {
       if (localStorage.getItem('theme') === 'dark') {
         document.documentElement.classList.add('dark');
@@ -19,11 +17,11 @@
     });
   </script>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">  <!-- হেডার / ন্যাভবার -->  <header class="bg-indigo-600 dark:bg-indigo-800 text-white px-6 py-4 flex justify-between items-center">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">  <!-- হেডার -->  <header class="bg-indigo-600 dark:bg-indigo-800 text-white px-6 py-4 flex justify-between items-center">
     <div class="flex items-center space-x-4">
       <h1 class="text-2xl font-bold">Luminix</h1>
       <nav class="hidden md:flex space-x-4">
-        <a href="#home" class="hover:underline">হোম</a>
+        <a href="#" class="hover:underline">হোম</a>
         <a href="#upload" class="hover:underline">আপলোড</a>
         <a href="#profile" class="hover:underline">প্রোফাইল</a>
       </nav>
@@ -34,54 +32,38 @@
     <button onclick="toggleDarkMode()" class="ml-4 bg-white text-indigo-700 px-3 py-1 rounded text-sm">🌓 মোড</button>
   </header>
   <nav id="mobile-menu" class="md:hidden bg-indigo-500 text-white px-6 py-2 hidden">
-    <a href="#home" class="block py-1">হোম</a>
+    <a href="#" class="block py-1">হোম</a>
     <a href="#upload" class="block py-1">আপলোড</a>
     <a href="#profile" class="block py-1">প্রোফাইল</a>
-  </nav>  <!-- হোম / কনটেন্ট -->  <main id="home" class="p-6 max-w-5xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">স্বাগতম, Luminix-এ!</h2>
-    <p class="mb-6">এখানে আপনি ভিডিও দেখতে, আপলোড করতে ও অন্যদের সাথে শেয়ার করতে পারবেন।</p><!-- পরিসংখ্যান ড্যাশবোর্ড -->
-<section class="mb-10">
-  <h3 class="text-xl font-semibold mb-2">আপনার চ্যানেল পরিসংখ্যান</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-      <p class="text-sm">মোট ভিডিও</p>
-      <p class="text-2xl font-bold">১৮</p>
+  </nav>  <!-- ভিডিও হোম ফিড -->  <main class="p-6 max-w-7xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-6">🔥 ট্রেন্ডিং ভিডিও</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- ভিডিও কার্ড -->
+      <div class="bg-white dark:bg-gray-800 rounded shadow">
+        <img src="https://via.placeholder.com/400x225.png?text=ভিডিও+১" alt="ভিডিও থাম্বনেইল" class="rounded-t">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">বাংলা ভ্লগ পর্ব ১</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">TechTumi • ৫.৩K ভিউ • ১ দিন আগে</p>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded shadow">
+        <img src="https://via.placeholder.com/400x225.png?text=ভিডিও+২" alt="ভিডিও থাম্বনেইল" class="rounded-t">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">রান্নার রেসিপি – দই চিংড়ি</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">RannaGhor • ৩.৮K ভিউ • ২ দিন আগে</p>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded shadow">
+        <img src="https://via.placeholder.com/400x225.png?text=ভিডিও+৩" alt="ভিডিও থাম্বনেইল" class="rounded-t">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">টিউটোরিয়াল: HTML শিখুন</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">CodeBangla • ৭.২K ভিউ • ৩ দিন আগে</p>
+        </div>
+      </div>
+      <!-- আরও ভিডিও কার্ড চাইলে কপি করে নিন -->
     </div>
-    <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-      <p class="text-sm">মোট ভিউ</p>
-      <p class="text-2xl font-bold">৪২,৩৪০</p>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-      <p class="text-sm">সাবস্ক্রাইবার</p>
-      <p class="text-2xl font-bold">৮৬০</p>
-    </div>
-  </div>
-</section>
-
-<!-- ভিডিও আপলোড ফর্ম -->
-<section id="upload" class="mb-10">
-  <h3 class="text-xl font-semibold mb-2">ভিডিও আপলোড করুন</h3>
-  <form class="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-4">
-    <input type="text" placeholder="ভিডিও শিরোনাম" class="w-full p-2 border rounded">
-    <textarea placeholder="বর্ণনা..." class="w-full p-2 border rounded"></textarea>
-    <input type="file" class="w-full">
-    <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded">আপলোড করুন</button>
-  </form>
-</section>
-
-<!-- ইউজার প্রোফাইল -->
-<section id="profile">
-  <h3 class="text-xl font-semibold mb-2">প্রোফাইল</h3>
-  <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-    <p><strong>নাম:</strong> জন ডো</p>
-    <p><strong>ইমেইল:</strong> john@example.com</p>
-    <p><strong>সদস্য হয়েছেন:</strong> জানুয়ারি ২০২৪</p>
-    <button class="mt-4 bg-red-500 text-white px-3 py-1 rounded">লগআউট</button>
-  </div>
-</section>
-
-  </main>  <!-- ফুটার -->  <footer class="bg-gray-200 dark:bg-gray-800 text-center p-4 text-sm text-gray-600 dark:text-gray-300">
-    © ২০২৫ Luminix — Powered by বাংলাভাষী ডেভেলপাররা
+  </main>  <!-- ফুটার -->  <footer class="bg-gray-200 dark:bg-gray-800 text-center p-4 text-sm text-gray-600 dark:text-gray-300 mt-10">
+    © ২০২৫ Luminix — বাংলা ভিডিও প্ল্যাটফর্ম
   </footer>
 </body>
 </html>
